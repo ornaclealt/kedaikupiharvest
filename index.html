@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Kupi Harvest - Yogyakarta</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS VARIABLES & RESET */
+        :root {
+            --primary: #4B3621;
+            --accent: #D4A373;
+            --bg-light: #FAFAFA;
+            --text-dark: #333;
+            --text-light: #fff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* NAVBAR */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; background: rgba(255,255,255,0.95);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .nav-links a { margin-left: 2rem; font-weight: 500; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--accent); }
+        .btn-cta {
+            background: var(--primary); color: var(--text-light);
+            padding: 0.5rem 1.2rem; border-radius: 5px;
+        }
+        .btn-cta:hover { background: var(--accent); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: var(--text-light); padding: 0 1rem;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+        .btn-hero {
+            padding: 1rem 2rem; background: var(--accent); color: var(--primary);
+            font-weight: 700; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn-hero:hover { background: #fff; }
+
+        /* ABOUT SECTION */
+        .section { padding: 5rem 5%; }
+        .about { display: flex; flex-wrap: wrap; align-items: center; gap: 3rem; }
+        .about-img { flex: 1; min-width: 300px; }
+        .about-img img { width: 100%; border-radius: 10px; box-shadow: 10px 10px 0 var(--accent); }
+        .about-text { flex: 1; min-width: 300px; }
+        .section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+
+        /* MENU HIGHLIGHTS */
+        .menu-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem; margin-top: 3rem;
+        }
+        .menu-card {
+            background: #fff; padding: 2rem; border-radius: 10px;
+            text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-10px); }
+        .menu-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
+        .price { color: var(--primary); font-weight: 700; margin-top: 0.5rem; display: block; }
+
+        /* LOCATION & FOOTER */
+        .location { background: var(--primary); color: var(--text-light); text-align: center; }
+        .location h2 { color: var(--accent); }
+        .map-container {
+            margin: 2rem auto; width: 100%; max-width: 800px; height: 400px;
+            border: 5px solid var(--accent); border-radius: 10px; overflow: hidden;
+        }
+        footer {
+            background: #2c2c2c; color: #888; text-align: center; padding: 2rem; font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+            .logo { flex: 1; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">KEDAI KUPI HARVEST</div>
+        <div class="nav-links">
+            <a href="#about">Tentang Kami</a>
+            <a href="#catalog">Katalog</a>
+            <a href="#catalog">Katalog</a>
+            <a href="#location">Lokasi</a>
+            <a href="https://wa.me/6281234567890" class="btn-cta">Reservasi</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Rasakan Kehangatan <br>di Setiap Cangkir</h1>
+        <p>Tempat terbaik di Yogyakarta untuk memanen inspirasi, berbagi cerita, dan menikmati kopi berkualitas.</p>
+        <a href="#menu" class="btn-hero">Lihat Menu</a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+        <div class="about-img">
+            <!-- Ganti src dengan foto interior asli Kedai Kupi Harvest -->
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Interior Kedai">
+        </div>
+        <div class="about-text">
+            <h2 class="section-title">Kenapa Harvest?</h2>
+            <p>Berlokasi strategis di jantung Yogyakarta, <strong>Kedai Kupi Harvest</strong> hadir sebagai ruang temu bagi para penikmat kopi, mahasiswa, dan pekerja kreatif.</p>
+            <br>
+            <p>Kami percaya bahwa kopi bukan sekadar minuman, tapi sebuah medium untuk "memanen" (Harvest) ide-ide segar dan koneksi baru. Dengan biji kopi pilihan dan suasana yang *homey*, kami siap menemani hari-hari produktif Anda.</p>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section class="section location" id="location">
+        <h2 class="section-title">Kunjungi Kami</h2>
+        <p>Jl. Terban, Kec. Gondokusuman, Kota Yogyakarta</p>
+        
+        <!-- Embed Google Maps dari link yang Anda berikan -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.286707328659!2d110.37882031532785!3d-7.766317394396263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a591cddd7c6f9%3A0x7facac01faff3824!2sKedai%20Kupi%20Harvest!5e0!3m2!1sid!2sid!4v1679999999999!5m2!1sid!2sid" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div style="margin-top: 2rem;">
+            <h3>Jam Operasional</h3>
+            <p>Setiap Hari: 08.00 - 24.00 WIB</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Kedai Kupi Harvest Yogyakarta. All Rights Reserved.</p>
+        <div style="margin-top: 1rem; font-size: 1.2rem;">
+            <a href="#" style="margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="margin: 0 10px;"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
